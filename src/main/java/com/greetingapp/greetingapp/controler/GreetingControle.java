@@ -20,4 +20,11 @@ public class GreetingControle {
         return "<h1>Hellow world </h1>";
     }
 
+    @GetMapping("/greeting")
+    public Greeting greeting(@RequestParam(defaultValue = "World") String firstName, String lastName) {
+        User user = new User();
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        return greetingService.addGreeting(user);
+    }
 }
