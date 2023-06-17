@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface GreetingService  {
     Greeting addGreeting(User user);
+
 }

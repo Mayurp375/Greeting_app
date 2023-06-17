@@ -32,19 +32,4 @@ public class GreetingControle {
         return greetingService.fetchGreetingById(id);
     }
 
-    @GetMapping("/getAllList")
-    public List<Greeting> getAllList() {
-        return greetingService.getAllList();
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public String deleteGreeting(@PathVariable("id") Long id) {
-        greetingService.deleteGreeting(id);
-        return "Greeting deleted Successfully!";
-    }
-
-    @PutMapping("/update/{id}")
-    public Greeting updateGreeting(@PathVariable("id") Long id, @RequestBody User user) {
-        return greetingService.updateGreeting(id, user);
-    }
 }
