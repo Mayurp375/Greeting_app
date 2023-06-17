@@ -6,14 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface GreetingService extends JpaRepository<Greeting,Integer> {
+public interface GreetingService  {
     Greeting addGreeting(User user);
-
-    Greeting fetchGreetingById(Long id);
-
-    List<Greeting> getAllList();
-
-    void deleteGreeting(Long id);
-
-    Greeting updateGreeting(Long id, User user);
 }

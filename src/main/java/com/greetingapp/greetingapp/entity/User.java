@@ -1,7 +1,11 @@
 package com.greetingapp.greetingapp.entity;
 
-public class User {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
+public class User {
+@Id
     private String firstName;
     private String lastName;
 
