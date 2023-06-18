@@ -13,4 +13,5 @@ public interface GreetingService  {
 	Greeting fetchGreetingById(int id);
 
 	public List<Greeting> getList();
+	public Greeting update(int id,User user);
 }
