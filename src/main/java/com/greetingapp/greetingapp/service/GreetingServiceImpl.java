@@ -33,14 +33,21 @@ public class GreetingServiceImpl implements GreetingService {
         return greetingRepository.findAll();
     }
 
-    public Greeting update(int id,User user){
+    public Greeting update(int id, User user) {
 
         Greeting greeting = greetingRepository.findById(id).get();
 
-        greeting.setMasage(String.format(template, (user.toString().isEmpty()) ? "Hello World" : user.getFirstName()+" "+user.getLastName()));
+        greeting.setMasage(String.format(template,
+                (user.toString().isEmpty()) ? "Hello World" : user.getFirstName() + " " + user.getLastName()));
 
         return greetingRepository.save(greeting);
 
     }
+
+    @Override
+    public void delet(int id) {
+         greetingRepository.deleteById(id);
+    }
+
 
 }

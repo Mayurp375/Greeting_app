@@ -14,4 +14,6 @@ public interface GreetingService  {
 
 	public List<Greeting> getList();
 	public Greeting update(int id,User user);
+
+	public void delet(int id);
 }
