@@ -1,39 +1,39 @@
 package com.greetingapp.greetingapp.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import lombok.*;
 
-@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class User {
-@Id
+
     private String firstName;
     private String lastName;
 
-    public User(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public User() {
-    }
-
+    
     public String getFirstName() {
-        return firstName;
-    }
+		return firstName;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
 
-    public String getLastName() {
-        return lastName;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
-    @Override
+	public String getLastName() {
+		return lastName;
+	}
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+	@Override
     public String toString() {
         return "User{" +
                 "firstName='" + firstName + '\'' +

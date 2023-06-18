@@ -1,7 +1,12 @@
 package com.greetingapp.greetingapp.repo;
 
-import com.greetingapp.greetingapp.entity.Greeting;
+import com.greetingapp.greetingapp.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface GreetingRepo extends JpaRepository<Greeting,Integer> {
+import com.greetingapp.greetingapp.entity.Greeting;
+
+public interface GreetingRepo extends JpaRepository<Greeting, Integer> {
+
+    Greeting save(Greeting greeting);
+
 }

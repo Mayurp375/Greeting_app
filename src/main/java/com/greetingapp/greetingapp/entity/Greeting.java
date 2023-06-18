@@ -8,7 +8,6 @@ import lombok.*;
 @Entity
 @Table(name = "Greetings")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -18,7 +17,14 @@ public class Greeting {
     private String masage;
 
 
-    @Override
+    public Greeting(int id, String masage) {
+		super();
+		this.id = id;
+		this.masage = masage;
+	}
+
+
+	@Override
     public String toString() {
         return "Greeting{" +
                 "id=" + id +
